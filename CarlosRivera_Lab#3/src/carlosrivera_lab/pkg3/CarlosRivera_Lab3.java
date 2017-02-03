@@ -490,7 +490,22 @@ public class CarlosRivera_Lab3 {
                     }
                 }
                 if (subopcion.equalsIgnoreCase("b")) {
+                    submenu = "a- Empleados\n"
+                            + "b- Clientes\n";
+                    subopcion = JOptionPane.showInputDialog(submenu);
+                    if (subopcion.equalsIgnoreCase("a")) {
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar "));
+                        if (lista.get(posicion) instanceof Empleados) {
+                            lista.remove(posicion);
+                        }
 
+                    }
+                    if (subopcion.equalsIgnoreCase("b")) {
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar "));
+                        if (lista.get(posicion) instanceof Clientes) {
+                            lista.remove(posicion);
+                        }
+                    }
                 }
 
             }
