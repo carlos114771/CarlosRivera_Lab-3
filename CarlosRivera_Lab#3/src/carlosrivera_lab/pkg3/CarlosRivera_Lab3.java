@@ -473,7 +473,7 @@ public class CarlosRivera_Lab3 {
             }
             if (opcion == 5) {
                 for (Object temporal : lista) {
-                    
+                    salida += lista.indexOf(temporal) + " " + temporal + "\n";
                 }
             }
         }
