@@ -22,6 +22,7 @@ public class CarlosRivera_Lab3 {
     public static void main(String[] args) {
         // TODO code application logic here
         ArrayList lista = new ArrayList();
+        ArrayList<Ventas> ventas = new ArrayList();
         String menu, submenu, subopcion, salida = null;
         int numero_serie, llantas_respuesto;
         Date fecha_ensamblaje;
@@ -40,8 +41,8 @@ public class CarlosRivera_Lab3 {
             menu = "1- Agregar Carros o Personas\n"
                     + "2- Modificar Carros o Personas\n"
                     + "3- Eliminar Carro o Persona\n"
-                    + "4- Listar\n"
-                    + "5- Ventas\n"
+                    + "4- Ventas\n"
+                    + "5- Reporte\n"
                     + "6- Salir\n";
             opcion = Integer.parseInt(JOptionPane.showInputDialog(menu));
             //Agregar
@@ -63,20 +64,11 @@ public class CarlosRivera_Lab3 {
                         marca_llantas = JOptionPane.showInputDialog("Marca de las llantas ");
                         polarizado = JOptionPane.showInputDialog("Tiene Polarizado? ");
                         velocidad = Double.parseDouble(JOptionPane.showInputDialog(" Velocidad Maxima "));
-                        while (velocidad >= 155 || velocidad <= 160) {
-                            JOptionPane.showMessageDialog(null, "La velocidad tiene que estar entre 155 y 160 km");
-                            velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad Maxima "));
-                        }
+
                         galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        while (galones >= 50 || galones <= 55) {
-                            JOptionPane.showMessageDialog(null, "Los galones tienen que estar entre 50 y 55 ");
-                            galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        }
+
                         precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        while (precio >= 400000 || precio <= 600000) {
-                            JOptionPane.showMessageDialog(null, "El precio de venta tiene que estar entre 400,000 y 600,000");
-                            precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        }
+
                         lista.add(new MayBach(llantas_respuesto, numero_serie,
                                 fecha_ensamblaje, pintura, marca_llantas, polarizado,
                                 velocidad, galones, precio));
@@ -90,20 +82,11 @@ public class CarlosRivera_Lab3 {
                         marca_llantas = JOptionPane.showInputDialog("Marca de las llantas ");
                         polarizado = JOptionPane.showInputDialog("Tiene Polarizado? ");
                         velocidad = Double.parseDouble(JOptionPane.showInputDialog(" Velocidad Maxima "));
-                        while (velocidad >= 140 || velocidad <= 145) {
-                            JOptionPane.showMessageDialog(null, "La velocidad tiene que estar entre 140 y 145 km");
-                            velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad Maxima "));
-                        }
+
                         galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        while (galones >= 35 || galones <= 40) {
-                            JOptionPane.showMessageDialog(null, "Los galones tienen que estar entre 35 y 40 ");
-                            galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        }
+
                         precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        while (precio >= 500000 || precio <= 700000) {
-                            JOptionPane.showMessageDialog(null, "El precio de venta tiene que estar entre 500,000 y 700,000");
-                            precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        }
+
                         lista.add(new Morgan_Aero_8(cabina, convertible,
                                 numero_serie, fecha_ensamblaje, pintura,
                                 marca_llantas, polarizado, velocidad, galones, precio));
@@ -118,20 +101,11 @@ public class CarlosRivera_Lab3 {
                         marca_llantas = JOptionPane.showInputDialog("Marca de las llantas ");
                         polarizado = JOptionPane.showInputDialog("Tiene Polarizado? ");
                         velocidad = Double.parseDouble(JOptionPane.showInputDialog(" Velocidad Maxima "));
-                        while (velocidad >= 160 || velocidad <= 165) {
-                            JOptionPane.showMessageDialog(null, "La velocidad tiene que estar entre 160 y 165 km");
-                            velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad Maxima "));
-                        }
+
                         galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        while (galones >= 55 || galones <= 60) {
-                            JOptionPane.showMessageDialog(null, "Los galones tienen que estar entre 55 y 60 ");
-                            galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        }
+
                         precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        while (precio >= 450000 || precio <= 650000) {
-                            JOptionPane.showMessageDialog(null, "El precio de venta tiene que estar entre 450,000 y 650,000");
-                            precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        }
+
                         lista.add(new Fisker_Automotive(tipo, convertible,
                                 numero_serie, fecha_ensamblaje, pintura,
                                 marca_llantas, polarizado, velocidad, galones, precio));
@@ -143,31 +117,15 @@ public class CarlosRivera_Lab3 {
                         marca_llantas = JOptionPane.showInputDialog("Marca de las llantas ");
                         polarizado = JOptionPane.showInputDialog("Tiene Polarizado? ");
                         velocidad = Double.parseDouble(JOptionPane.showInputDialog(" Velocidad Maxima "));
-                        while (velocidad >= 175 || velocidad <= 180) {
-                            JOptionPane.showMessageDialog(null, "La velocidad tiene que estar entre 175 y 180 km");
-                            velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad Maxima "));
-                        }
-                        galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        while (galones >= 50 || galones <= 55) {
-                            JOptionPane.showMessageDialog(null, "Los galones tienen que estar entre 50 y 55 ");
-                            galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        }
-                        precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        while (precio >= 800000 || precio <= 1000000) {
-                            JOptionPane.showMessageDialog(null, "El precio de venta tiene que estar entre 800,000 y 1,000,000");
-                            precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        }
-                        peso = Double.parseDouble(JOptionPane.showInputDialog("Peso "));
-                        while (peso >= 1276 || peso <= 1376) {
-                            JOptionPane.showMessageDialog(null, "El peso tiene que estar entre 1276 y 1376");
-                            peso = Double.parseDouble(JOptionPane.showInputDialog("Peso "));
-                        }
-                        transmision = Double.parseDouble(JOptionPane.showInputDialog("Transmision "));
-                        while (transmision >= 6 || transmision <= 7) {
-                            JOptionPane.showMessageDialog(null, "La transimision tiene que ser 6 o 7");
-                            transmision = Double.parseDouble(JOptionPane.showInputDialog("Transmision "));
 
-                        }
+                        galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
+
+                        precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
+
+                        peso = Double.parseDouble(JOptionPane.showInputDialog("Peso "));
+
+                        transmision = Double.parseDouble(JOptionPane.showInputDialog("Transmision "));
+
                         lista.add(new Tramontana(peso, transmision, numero_serie,
                                 fecha_ensamblaje, pintura, marca_llantas, polarizado,
                                 velocidad, galones, precio));
@@ -181,40 +139,22 @@ public class CarlosRivera_Lab3 {
                         nombre = JOptionPane.showInputDialog("Ingrese el nombre ");
                         id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id "));
                         edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
-                        while (edad <= 18) {
-                            JOptionPane.showMessageDialog(null, "La edad tiene que ser mayor a 18");
-                            edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
-                        }
+
                         altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Altura "));
-                        while (altura <= 1.55) {
-                            JOptionPane.showMessageDialog(null, "La altura tiene que ser mayor a 1.55 ");
-                            altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Altura "));
-                        }
+
                         peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
-                        while (peso_persona <= 120) {
-                            JOptionPane.showMessageDialog(null, "El peso tiene que ser mayor a 120 ");
-                            peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
-                        }
+
                         horas_trabajadas = Integer.parseInt(JOptionPane.showInputDialog("Ingrese las horas trabajadas "));
                         lista.add(new Empleados(horas_trabajadas, new Clientes(), nombre, id, edad, altura, peso_persona));
                         if (subopcion.equalsIgnoreCase("b")) {
                             nombre = JOptionPane.showInputDialog("Ingrese el nombre ");
                             id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id "));
                             edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
-                            while (edad <= 18) {
-                                JOptionPane.showMessageDialog(null, "La edad tiene que ser mayor a 18");
-                                edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
-                            }
+
                             altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Altura "));
-                            while (altura <= 1.55) {
-                                JOptionPane.showMessageDialog(null, "La altura tiene que ser mayor a 1.55 ");
-                                altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Altura "));
-                            }
+
                             peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
-                            while (peso_persona <= 120) {
-                                JOptionPane.showMessageDialog(null, "El peso tiene que ser mayor a 120 ");
-                                peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
-                            }
+
                             dinero = Double.parseDouble(JOptionPane.showInputDialog("Dinero que porta "));
                             lista.add(new Clientes(dinero, nombre, id, edad, altura, peso_persona));
                         }
@@ -247,20 +187,11 @@ public class CarlosRivera_Lab3 {
                         marca_llantas = JOptionPane.showInputDialog("Marca de las llantas ");
                         polarizado = JOptionPane.showInputDialog("Tiene Polarizado? ");
                         velocidad = Double.parseDouble(JOptionPane.showInputDialog(" Velocidad Maxima "));
-                        while (velocidad >= 155 || velocidad <= 160) {
-                            JOptionPane.showMessageDialog(null, "La velocidad tiene que estar entre 155 y 160 km");
-                            velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad Maxima "));
-                        }
+
                         galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        while (galones >= 50 || galones <= 55) {
-                            JOptionPane.showMessageDialog(null, "Los galones tienen que estar entre 50 y 55 ");
-                            galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        }
+
                         precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        while (precio >= 400000 || precio <= 600000) {
-                            JOptionPane.showMessageDialog(null, "El precio de venta tiene que estar entre 400,000 y 600,000");
-                            precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        }
+
                         if (lista.get(posicion) instanceof MayBach) {
                             ((MayBach) lista.get(posicion)).setFecha_ensamblaje(fecha_ensamblaje);
                             ((MayBach) lista.get(posicion)).setGalones(galones);
@@ -289,20 +220,11 @@ public class CarlosRivera_Lab3 {
                         marca_llantas = JOptionPane.showInputDialog("Marca de las llantas ");
                         polarizado = JOptionPane.showInputDialog("Tiene Polarizado? ");
                         velocidad = Double.parseDouble(JOptionPane.showInputDialog(" Velocidad Maxima "));
-                        while (velocidad >= 140 || velocidad <= 145) {
-                            JOptionPane.showMessageDialog(null, "La velocidad tiene que estar entre 140 y 145 km");
-                            velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad Maxima "));
-                        }
+
                         galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        while (galones >= 35 || galones <= 40) {
-                            JOptionPane.showMessageDialog(null, "Los galones tienen que estar entre 35 y 40 ");
-                            galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        }
+
                         precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        while (precio >= 500000 || precio <= 700000) {
-                            JOptionPane.showMessageDialog(null, "El precio de venta tiene que estar entre 500,000 y 700,000");
-                            precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        }
+
                         if (lista.get(posicion) instanceof Morgan_Aero_8) {
                             ((Morgan_Aero_8) lista.get(posicion)).setCabina(cabina);
                             ((Morgan_Aero_8) lista.get(posicion)).setConvertible(convertible);
@@ -333,20 +255,11 @@ public class CarlosRivera_Lab3 {
                         marca_llantas = JOptionPane.showInputDialog("Marca de las llantas ");
                         polarizado = JOptionPane.showInputDialog("Tiene Polarizado? ");
                         velocidad = Double.parseDouble(JOptionPane.showInputDialog(" Velocidad Maxima "));
-                        while (velocidad >= 160 || velocidad <= 165) {
-                            JOptionPane.showMessageDialog(null, "La velocidad tiene que estar entre 160 y 165 km");
-                            velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad Maxima "));
-                        }
+
                         galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        while (galones >= 55 || galones <= 60) {
-                            JOptionPane.showMessageDialog(null, "Los galones tienen que estar entre 55 y 60 ");
-                            galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        }
+
                         precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        while (precio >= 450000 || precio <= 650000) {
-                            JOptionPane.showMessageDialog(null, "El precio de venta tiene que estar entre 450,000 y 650,000");
-                            precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        }
+
                         if (lista.get(posicion) instanceof Fisker_Automotive) {
                             ((Fisker_Automotive) lista.get(posicion)).setConvertible(convertible);
                             ((Fisker_Automotive) lista.get(posicion)).setFecha_ensamblaje(fecha_ensamblaje);
@@ -374,25 +287,13 @@ public class CarlosRivera_Lab3 {
                         marca_llantas = JOptionPane.showInputDialog("Marca de las llantas ");
                         polarizado = JOptionPane.showInputDialog("Tiene Polarizado? ");
                         velocidad = Double.parseDouble(JOptionPane.showInputDialog(" Velocidad Maxima "));
-                        while (velocidad >= 175 || velocidad <= 180) {
-                            JOptionPane.showMessageDialog(null, "La velocidad tiene que estar entre 175 y 180 km");
-                            velocidad = Double.parseDouble(JOptionPane.showInputDialog("Velocidad Maxima "));
-                        }
+
                         galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        while (galones >= 50 || galones <= 55) {
-                            JOptionPane.showMessageDialog(null, "Los galones tienen que estar entre 50 y 55 ");
-                            galones = Double.parseDouble(JOptionPane.showInputDialog("Galones "));
-                        }
+
                         precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        while (precio >= 800000 || precio <= 1000000) {
-                            JOptionPane.showMessageDialog(null, "El precio de venta tiene que estar entre 800,000 y 1,000,000");
-                            precio = Double.parseDouble(JOptionPane.showInputDialog("Precio de Ventas "));
-                        }
+
                         peso = Double.parseDouble(JOptionPane.showInputDialog("Peso "));
-                        while (peso >= 1276 || peso <= 1376) {
-                            JOptionPane.showMessageDialog(null, "El peso tiene que estar entre 1276 y 1376");
-                            peso = Double.parseDouble(JOptionPane.showInputDialog("Peso "));
-                        }
+
                         transmision = Double.parseDouble(JOptionPane.showInputDialog("Transmision "));
                         while (transmision >= 6 || transmision <= 7) {
                             JOptionPane.showMessageDialog(null, "La transimision tiene que ser 6 o 7");
@@ -428,20 +329,11 @@ public class CarlosRivera_Lab3 {
                         nombre = JOptionPane.showInputDialog("Ingrese el nombre ");
                         id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id "));
                         edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
-                        while (edad <= 18) {
-                            JOptionPane.showMessageDialog(null, "La edad tiene que ser mayor a 18");
-                            edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
-                        }
+
                         altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Altura "));
-                        while (altura <= 1.55) {
-                            JOptionPane.showMessageDialog(null, "La altura tiene que ser mayor a 1.55 ");
-                            altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Altura "));
-                        }
+
                         peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
-                        while (peso_persona <= 120) {
-                            JOptionPane.showMessageDialog(null, "El peso tiene que ser mayor a 120 ");
-                            peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
-                        }
+
                         horas_trabajadas = Integer.parseInt(JOptionPane.showInputDialog("Ingrese las horas trabajadas "));
                         if (lista.get(posicion) instanceof Empleados) {
                             ((Empleados) lista.get(posicion)).setAltura(altura);
@@ -463,20 +355,11 @@ public class CarlosRivera_Lab3 {
                             nombre = JOptionPane.showInputDialog("Ingrese el nombre ");
                             id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id "));
                             edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
-                            while (edad <= 18) {
-                                JOptionPane.showMessageDialog(null, "La edad tiene que ser mayor a 18");
-                                edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
-                            }
+
                             altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Altura "));
-                            while (altura <= 1.55) {
-                                JOptionPane.showMessageDialog(null, "La altura tiene que ser mayor a 1.55 ");
-                                altura = Double.parseDouble(JOptionPane.showInputDialog("Ingrese la Altura "));
-                            }
+
                             peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
-                            while (peso_persona <= 120) {
-                                JOptionPane.showMessageDialog(null, "El peso tiene que ser mayor a 120 ");
-                                peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
-                            }
+
                             dinero = Double.parseDouble(JOptionPane.showInputDialog("Dinero que porta "));
                             if (lista.get(posicion) instanceof Clientes) {
                                 ((Clientes) lista.get(posicion)).setAltura(altura);
@@ -581,10 +464,17 @@ public class CarlosRivera_Lab3 {
 
             }
             if (opcion == 4) {
+                posicion = Integer.parseInt(JOptionPane.showInputDialog("Posicion de las ventas "));
+                if (lista.get(posicion) instanceof Clientes) {
+                    ((Empleados) lista.get(posicion)).getCliente();
+                    ((Clientes) lista.get(posicion)).getLista_carro();
+                }
 
             }
             if (opcion == 5) {
-
+                for (Object temporal : lista) {
+                    
+                }
             }
         }
     }
