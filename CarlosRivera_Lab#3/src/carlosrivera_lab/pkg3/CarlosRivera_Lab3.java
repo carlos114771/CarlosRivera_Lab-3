@@ -394,6 +394,7 @@ public class CarlosRivera_Lab3 {
                             + "b- Cliente\n";
                     subopcion = JOptionPane.showInputDialog(submenu);
                     if (subopcion.equalsIgnoreCase("a")) {
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
                         nombre = JOptionPane.showInputDialog("Ingrese el nombre ");
                         id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id "));
                         edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
@@ -412,8 +413,17 @@ public class CarlosRivera_Lab3 {
                             peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
                         }
                         horas_trabajadas = Integer.parseInt(JOptionPane.showInputDialog("Ingrese las horas trabajadas "));
-                        lista.add(new Empleados(horas_trabajadas, new Clientes(), nombre, id, edad, altura, peso_persona));
+                        if (lista.get(posicion) instanceof Empleados) {
+                            ((Empleados) lista.get(posicion)).setAltura(altura);
+                            ((Empleados) lista.get(posicion)).setCliente(new Clientes());
+                            ((Empleados) lista.get(posicion)).setEdad(edad);
+                            ((Empleados) lista.get(posicion)).setHoras_trabajadas(horas_trabajadas);
+                            ((Empleados) lista.get(posicion)).setId(id);
+                            ((Empleados) lista.get(posicion)).setNombre(nombre);
+                            ((Empleados) lista.get(posicion)).setPeso(peso_persona);
+                        }
                         if (subopcion.equalsIgnoreCase("b")) {
+                            posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
                             nombre = JOptionPane.showInputDialog("Ingrese el nombre ");
                             id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id "));
                             edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la Edad "));
@@ -432,7 +442,14 @@ public class CarlosRivera_Lab3 {
                                 peso_persona = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el peso de la persona "));
                             }
                             dinero = Double.parseDouble(JOptionPane.showInputDialog("Dinero que porta "));
-                            lista.add(new Clientes(dinero, nombre, id, edad, altura, peso_persona));
+                            if (lista.get(posicion) instanceof Clientes) {
+                                ((Clientes) lista.get(posicion)).setAltura(altura);
+                                ((Clientes) lista.get(posicion)).setDinero(dinero);
+                                ((Clientes) lista.get(posicion)).setEdad(edad);
+                                ((Clientes) lista.get(posicion)).setId(id);
+                                ((Clientes) lista.get(posicion)).setNombre(nombre);
+                                ((Clientes) lista.get(posicion)).setPeso(peso_persona);
+                            }
                         }
                     }
                 }
