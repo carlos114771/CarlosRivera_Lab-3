@@ -22,7 +22,7 @@ public class CarlosRivera_Lab3 {
     public static void main(String[] args) {
         // TODO code application logic here
         ArrayList lista = new ArrayList();
-        String menu, submenu, subopcion;
+        String menu, submenu, subopcion, salida = null;
         int numero_serie, llantas_respuesto;
         Date fecha_ensamblaje;
         Color pintura;
@@ -233,6 +233,12 @@ public class CarlosRivera_Lab3 {
                             + "d- Tramontana\n";
                     subopcion = JOptionPane.showInputDialog(submenu);
                     if (subopcion.equalsIgnoreCase("a")) {
+                        for (Object temporal : lista) {
+                            if (temporal instanceof MayBach) {
+                                salida += lista.indexOf(temporal) + " " + ((MayBach) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
                         posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a Modificar"));
                         llantas_respuesto = Integer.parseInt(JOptionPane.showInputDialog("Cantidad de Llantas de Respuesto "));
                         numero_serie = Integer.parseInt(JOptionPane.showInputDialog("Numero de Serie "));
@@ -268,6 +274,12 @@ public class CarlosRivera_Lab3 {
                         }
                     }
                     if (subopcion.equalsIgnoreCase("b")) {
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Morgan_Aero_8) {
+                                salida += lista.indexOf(temporal) + " " + ((MayBach) temporal);
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
                         posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
                         convertible = JOptionPane.showInputDialog("Es convertible? ");
                         cabina = JOptionPane.showInputDialog("Cabina Simple o Doble? ");
@@ -306,6 +318,12 @@ public class CarlosRivera_Lab3 {
 
                     }
                     if (subopcion.equalsIgnoreCase("c")) {
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Fisker_Automotive) {
+                                salida += lista.indexOf(temporal) + " " + ((Fisker_Automotive) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
                         posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
                         tipo = JOptionPane.showInputDialog("Es Camioneta o Turismo ");
                         convertible = JOptionPane.showInputDialog("Es convetible? ");
@@ -343,6 +361,12 @@ public class CarlosRivera_Lab3 {
                         }
                     }
                     if (subopcion.equalsIgnoreCase("d")) {
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Tramontana) {
+                                salida += lista.indexOf(temporal) + " " + ((Tramontana) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
                         posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
                         numero_serie = Integer.parseInt(JOptionPane.showInputDialog("Numero de Serie "));
                         fecha_ensamblaje = new Date();
@@ -394,6 +418,12 @@ public class CarlosRivera_Lab3 {
                             + "b- Cliente\n";
                     subopcion = JOptionPane.showInputDialog(submenu);
                     if (subopcion.equalsIgnoreCase("a")) {
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Empleados) {
+                                salida += lista.indexOf(temporal) + " " + ((Empleados) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
                         posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
                         nombre = JOptionPane.showInputDialog("Ingrese el nombre ");
                         id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id "));
@@ -423,6 +453,12 @@ public class CarlosRivera_Lab3 {
                             ((Empleados) lista.get(posicion)).setPeso(peso_persona);
                         }
                         if (subopcion.equalsIgnoreCase("b")) {
+                            for (Object temporal : lista) {
+                                if (temporal instanceof Clientes) {
+                                    salida += lista.indexOf(temporal) + " " + ((Clientes) temporal) + "\n";
+                                }
+                            }
+                            JOptionPane.showMessageDialog(null, salida);
                             posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
                             nombre = JOptionPane.showInputDialog("Ingrese el nombre ");
                             id = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id "));
@@ -465,25 +501,48 @@ public class CarlosRivera_Lab3 {
                             + "d- Tramontana\n";
                     subopcion = JOptionPane.showInputDialog(submenu);
                     if (subopcion.equalsIgnoreCase("a")) {
-                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
+                        for (Object temporal : lista) {
+                            if (temporal instanceof MayBach) {
+                                salida += lista.indexOf(temporal) + " " + ((MayBach) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a eliminar "));
                         if (lista.get(posicion) instanceof MayBach) {
                             lista.remove(posicion);
                         }
                     }
                     if (subopcion.equalsIgnoreCase("b")) {
-                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Morgan_Aero_8) {
+                                salida += lista.indexOf(temporal) + " " + ((MayBach) temporal);
+                            }
+                        }
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a eliminar "));
                         if (lista.get(posicion) instanceof Morgan_Aero_8) {
                             lista.remove(posicion);
                         }
                     }
                     if (subopcion.equalsIgnoreCase("c")) {
-                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Fisker_Automotive) {
+                                salida += lista.indexOf(temporal) + " " + ((Fisker_Automotive) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a eliminar "));
                         if (lista.get(posicion) instanceof Fisker_Automotive) {
                             lista.remove(posicion);
                         }
                     }
                     if (subopcion.equalsIgnoreCase("d")) {
-                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Tramontana) {
+                                salida += lista.indexOf(temporal) + " " + ((Tramontana) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a eliminar "));
                         if (lista.get(posicion) instanceof Tramontana) {
                             lista.remove(posicion);
                         }
@@ -494,14 +553,26 @@ public class CarlosRivera_Lab3 {
                             + "b- Clientes\n";
                     subopcion = JOptionPane.showInputDialog(submenu);
                     if (subopcion.equalsIgnoreCase("a")) {
-                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar "));
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Empleados) {
+                                salida += lista.indexOf(temporal) + " " + ((Empleados) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar "));
                         if (lista.get(posicion) instanceof Empleados) {
                             lista.remove(posicion);
                         }
 
                     }
                     if (subopcion.equalsIgnoreCase("b")) {
-                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a modificar "));
+                        for (Object temporal : lista) {
+                            if (temporal instanceof Clientes) {
+                                salida += lista.indexOf(temporal) + " " + ((Clientes) temporal) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, salida);
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion a eliminar "));
                         if (lista.get(posicion) instanceof Clientes) {
                             lista.remove(posicion);
                         }
@@ -517,5 +588,4 @@ public class CarlosRivera_Lab3 {
             }
         }
     }
-
 }
