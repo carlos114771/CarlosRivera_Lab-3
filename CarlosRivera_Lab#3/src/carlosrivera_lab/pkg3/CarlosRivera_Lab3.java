@@ -39,8 +39,8 @@ public class CarlosRivera_Lab3 {
         while (opcion != 6) {
             menu = "1- Agregar Carros o Personas\n"
                     + "2- Modificar Carros o Personas\n"
-                    + "3- Listar\n"
-                    + "4- Eliminar Carro o Persona\n"
+                    + "3- Eliminar Carro o Persona\n"
+                    + "4- Listar\n"
                     + "5- Ventas\n"
                     + "6- Salir\n";
             opcion = Integer.parseInt(JOptionPane.showInputDialog(menu));
@@ -455,6 +455,43 @@ public class CarlosRivera_Lab3 {
                 }
             }
             if (opcion == 3) {
+                submenu = "a- Eliminar Carro\n"
+                        + "b- Eliminar Persona\n";
+                subopcion = JOptionPane.showInputDialog(submenu);
+                if (subopcion.equalsIgnoreCase("a")) {
+                    submenu = "a- MayBach\n"
+                            + "b- Morgan Aero 8\n"
+                            + "c- Fisker Automotive\n"
+                            + "d- Tramontana\n";
+                    subopcion = JOptionPane.showInputDialog(submenu);
+                    if (subopcion.equalsIgnoreCase("a")) {
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
+                        if (lista.get(posicion) instanceof MayBach) {
+                            lista.remove(posicion);
+                        }
+                    }
+                    if (subopcion.equalsIgnoreCase("b")) {
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
+                        if (lista.get(posicion) instanceof Morgan_Aero_8) {
+                            lista.remove(posicion);
+                        }
+                    }
+                    if (subopcion.equalsIgnoreCase("c")) {
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
+                        if (lista.get(posicion) instanceof Fisker_Automotive) {
+                            lista.remove(posicion);
+                        }
+                    }
+                    if (subopcion.equalsIgnoreCase("d")) {
+                        posicion = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion a modificar "));
+                        if (lista.get(posicion) instanceof Tramontana) {
+                            lista.remove(posicion);
+                        }
+                    }
+                }
+                if (subopcion.equalsIgnoreCase("b")) {
+
+                }
 
             }
             if (opcion == 4) {
